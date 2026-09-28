@@ -1,0 +1,83 @@
+1=(imprimir os numeros de 1 a 10)
+#include <stdio.h>
+
+int main() {
+    int i;
+    
+    for (i = 1; i <= 10; i++) {
+        printf("%d\n", i);
+    }
+    
+    return 0;
+}
+------------------------------------------------
+2=(números de 10 a 1, em ordem decrescente)
+#include <stdio.h>
+
+int main() {
+    int i;
+    
+    for (i = 10; i >= 1; i--) {
+        printf("%d\n", i);
+    }
+    
+    return 0;
+}
+-----------------------------------------------
+3=( calcule e imprima numeros de 1 a 100)
+#include <stdio.h>
+
+int main() {
+    int i;
+    int soma = 0; // Importante inicializar com 0
+    
+    for (i = 1; i <= 100; i++) {
+        soma = soma + i; // Ou: soma += i;
+    }
+    
+    printf("A soma de 1 a 100 eh: %d\n", soma);
+    
+    return 0;
+}
+-----------------------------------------------
+4=( numero inteiro de N e imprima todos os numeros de 1 ate N)
+#include <stdio.h>
+
+int main() {
+    int N, i;
+    
+    printf("Digite um numero inteiro: ");
+    scanf("%d", &N);
+    
+    for (i = 1; i <= N; i++) {
+        printf("%d\n", i);
+    }
+    
+    return 0;
+}
+-----------------------------------------------
+5=(SOLICITE AO USUARIO UM NUMERO INTEIRO E DETERMINE QUANTOS DIGITOS ESSE NUMERO POSSUI )
+#include <stdio.h>
+
+int main() {
+    int numero, contador = 0;
+    
+    printf("Digite un numero inteiro: ");
+    scanf("%d", &numero);
+    
+    // Tratamento para números negativos (o sinal não conta como dígito)
+    if (numero < 0) {
+        numero = -numero;
+    }
+    
+    // O 'do-while' garante que o número 0 seja contado como 1 dígito
+    do {
+        contador++;
+        numero = numero / 10;
+    } while (numero > 0);
+    
+    printf("O numero possui %d digitos.\n", contador);
+    
+    return 0;
+}
+-----------------------------------------------
